@@ -1,0 +1,39 @@
+<div class="container">
+    <h4 style="text-align: center;">Doctor Information</h4>
+    <div class="table-wrapper">
+        <span>Tap on below bar and show all doctors</span>
+        <select class="hideLabel form-control" [(ngModel)]="doctId" name="Id" (change)="selectName(doctId);">
+            <option selected="" value=""></option>
+            <option [ngValue]="k.id" *ngFor="let k of doctors">
+                {{k.name}}
+            </option>
+        </select>
+        <div *ngIf="doctorflag">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Specialist</th>
+                        <th>Patient Attended</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{doctorinfo.id}}</td>
+                        <td>{{doctorinfo.name}}</td>
+                        <td>{{doctorinfo.age}}</td>
+                        <td>{{doctorinfo.gender}}</td>
+                        <td>{{doctorinfo.specialist}}</td>
+                        <td>{{doctorinfo.numberOfPatients}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <button type="submit" (click)="back()">Back</button>
+</div>

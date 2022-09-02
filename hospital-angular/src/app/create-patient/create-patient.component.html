@@ -1,0 +1,39 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Create Patient</h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" id="patientName"
+            [(ngModel)] = "patient.name" name="patientName" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="dateOfVisit">Date Of Visit</label>
+            <input type="date" class="form-control" id="dateOfVisit"
+            [(ngModel)] = "patient.dateOfVisit" name="dateOfVisit" placeholder="Enter date of visit">
+        </div>
+        
+        <div class="form-group">
+            <label for="visitedDoctor">Visited Doctor</label>
+            <select class="hideLabel form-control" [(ngModel)]="patient.visitedDoctor"  name="Id" (change)="selectName(patient.visitedDoctorId);">
+                <option selected="" value=""></option>
+                <option [ngValue]="k.name" *ngFor="let k of doctors">
+                    {{k.name}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="prescription">Prescription</label>
+            <input type="text" class="form-control" id="prescription"
+            [(ngModel)] = "patient.prescription" name="prescription" placeholder="Enter Prescription">
+        </div>
+        <div class="form-group">
+            <label for="doctId">Doctor Id</label>
+            <input type="number" class="form-control" id="doctorId"
+            [(ngModel)] = "patient.visitedDoctorId" name="doctorId" placeholder="Enter doctorId">
+        </div> 
+
+        <button class="btn btn-success" id="button" type="submit">Submit</button>
+
+    </form>
+</div>

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="" routerLinkActive="active" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="create-patient" routerLinkActive="active" class="nav-link">Create Patient</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="create-doctor" routerLinkActive="active" class="nav-link">Create Doctor</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="show-doctor" routerLinkActive="active" class="nav-link">Doctor Details</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="show-patient" routerLinkActive="active" class="nav-link">Patient Details</a>
+    </li>
+    
+  </ul>
+</nav>
+
+<div>
+  <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img,w_1024,h_533/https://existek.com/wp-content/uploads/2019/05/hospital-management-system-post-cover-image.jpg" alt="image" width="100%" height="250px">
+</div>
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <span>All Rights Reserved 2022 @Mindtree</span>
+
+  </div>
+</footer>

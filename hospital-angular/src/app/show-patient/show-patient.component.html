@@ -1,0 +1,30 @@
+<div class="container">
+    <h4 style="text-align: center;">Patient Information</h4>
+
+    <div class="table-wrapper">
+        <input type="text" placeholder="Please Enter Patient ID" [(ngModel)]="patientId">
+        <button type="submit" (click)="getPatientDetails(patientId)">Submit</button>
+        
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Date Of Visit</th>
+                    <th>Visited Doctor</th>
+                    <th>Prescription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{patients.id}}</td>
+                    <td>{{patients.name}}</td>
+                    <td>{{patients.dateOfVisit}}</td>
+                    <td>{{patients.visitedDoctor}}</td>
+                    <td>{{patients.prescription}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" (click)="back()">Back</button>
+    </div>
+</div>
